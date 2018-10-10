@@ -1,0 +1,8 @@
+/* Contact.scss called from Contact.js */
+section.contact {
+  padding: 32px 0 64px; }
+  section.contact .container {
+    max-width: 800px; }
+  section.contact p.muted {
+    margin: 0 auto;
+    text-align: left; }

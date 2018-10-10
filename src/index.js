@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import './index.css';
-import App from './components/App/App';
-import registerServiceWorker from './registerServiceWorker';
 import store from './store';
+
+import { App } from './components/App';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+
+import registerServiceWorker from './registerServiceWorker';
+import { initErrorLogger } from './lib/errorLogger';
 
 ReactDOM.render(
     <Provider store={ store }>
@@ -14,4 +19,5 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
+initErrorLogger();
 registerServiceWorker();

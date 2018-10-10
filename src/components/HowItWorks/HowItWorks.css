@@ -1,0 +1,8 @@
+/* HowItWorks.scss called from HowItWorks.js */
+section.how-it-works {
+  padding: 32px 0 64px; }
+  section.how-it-works .container {
+    max-width: 800px; }
+  section.how-it-works p.muted {
+    margin: 32px auto;
+    text-align: left; }

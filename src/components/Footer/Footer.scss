@@ -3,7 +3,7 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
 
-footer {
+#footer {
   background-color: $footer-background-color;
   border-top: 3px solid $contrastColor;
   color: $footer-text-color;
@@ -16,6 +16,10 @@ footer {
 
   ul {
     padding: 0;
+
+    &.social li {
+      display: inline-block;
+    }
 
     li {
       list-style: none;

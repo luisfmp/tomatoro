@@ -1,52 +1,45 @@
 import React, { Component } from 'react';
-import './App.css';
-import TomatoTimer from '../TomatoTimer';
-import StepSelector from '../StepSelector';
-import TomatorosCounter from '../TomatorosCounter';
+import connect from 'react-redux/es/connect/connect';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import TopNav from '../TopNav/TopNav';
-import HowItWorks from '../HowItWorks/HowItWorks';
-import Contact from '../Contact/Contact';
-import Footer from '../Footer/Footer';
+import TopNav from '../Common/TopNav';
 
-import { requestPermission } from '../../lib/notification';
+import PrivateRoute from './PrivateRoute';
+import Workspace from './Workspace';
+
+import { Login } from '../Login';
+import { Register } from '../Register';
+import { recoverSession } from '../../actions/SessionActions';
+import { Landing } from '../Landing';
 
 class App extends Component {
+
     componentWillMount() {
-        requestPermission();
+        this.props.recoverSession();
     }
 
     render() {
         return (
-            <div className="app">
-                <TopNav/>
+            <Router>
+                <main>
+                    <TopNav/>
 
-                <div className="tomato container">
-                    <div className="col-60">
-                        <TomatoTimer/>
-                    </div>
+                    <Switch>
+                        <Route path='/login' component={ Login }/>
+                        <Route path='/register' component={ Register }/>
 
-                    <div className="col-40">
-                        <h1>Take your time. Get things done.</h1>
+                        <PrivateRoute path='/dashboard' component={ Workspace }/>
 
-                        <TomatorosCounter/>
-
-                        <StepSelector/>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <HowItWorks/>
-
-                <hr/>
-
-                <Contact/>
-
-                <Footer/>
-            </div>
+                        <Route path='/' component={ Landing }/>
+                    </Switch>
+                </main>
+            </Router>
         );
     }
+
 }
 
-export default App;
+export default connect(
+    () => ({}),
+    { recoverSession }
+)(App);

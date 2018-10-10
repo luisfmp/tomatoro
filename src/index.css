@@ -1,0 +1,49 @@
+body {
+  color: #172B4D;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+
+::selection {
+  background: #fdcabd; }
+
+hr {
+  border: 1px solid #C9C9C9;
+  max-width: 960px; }
+
+h1 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 47px;
+  margin-top: 16px; }
+
+h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 22px; }
+
+a {
+  color: #F95428;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+button:not(:disabled) {
+  cursor: pointer; }
+
+button, a {
+  transition: background .15s ease-in-out; }
+
+.text-center {
+  text-align: center; }
+
+.muted {
+  color: #979797; }
+
+.long-spacing {
+  margin-top: 32px; }
+
+.container {
+  max-width: 800px; }
+  .container p {
+    margin: 32px;
+    text-align: left; }
