@@ -12,6 +12,6 @@ export const updateTitle = (seconds) => {
     } else {
         title = APP_TITLE;
     }
-
+    
     global.document.title = title;
 };

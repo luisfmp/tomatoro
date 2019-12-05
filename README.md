@@ -28,4 +28,8 @@ If you want to  contribute, please run all tests before creating a PR.
 
 ## License
 
+## Electron
+
+* `npm start` - Run the desktop application
+
 MIT © [Tony Mtz](http://tonymtz.com)

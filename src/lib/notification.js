@@ -24,7 +24,7 @@ export const sendNotification = (isStepWork) => {
         icon: 'favicon/favicon-96x96.png'
     };
 
-    let notification = new Notification(TITLE, options);
+    let notification = new window.Notification(TITLE, options);
 
     notification.onclick = () => {
         window.focus();
