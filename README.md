@@ -26,10 +26,10 @@ This app uses [Create React App](https://github.com/facebook/create-react-app). 
 
 If you want to  contribute, please run all tests before creating a PR.
 
-## License
-
 ## Electron
 
 * `npm start` - Run the desktop application
+
+## License
 
 MIT © [Tony Mtz](http://tonymtz.com)
